@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gastos Mensuales</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Incluir Chart.js desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Calculadora de Gastos Mensuales</h1>
+
+        <details class="expander" open>
+            <summary>💰 Configuración de Salario e IRPF</summary>
+            <div class="expander-content">
+                <div class="input-group">
+                    <label for="salarioBase">Salario Base (160 horas) (€):</label>
+                    <input type="number" id="salarioBase" value="1381.33" step="10.0" min="0">
+                    <small>Salario base correspondiente a jornada completa de 160 horas mensuales</small>
+                </div>
+
+                <div class="columns">
+                    <div class="column">
+                        <div class="input-group">
+                            <label for="horasExtra">Horas Extra:</label>
+                            <input type="number" id="horasExtra" value="0" step="1" min="0" max="100">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="metric">
+                            <label>Importe Horas Extra</label>
+                            <div id="importeHorasExtraValue">0.00 €</div>
+                            <p id="importeHorasExtraDelta">0 h × 6.50 €/h</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="irpf">IRPF (%):</label>
+                    <input type="number" id="irpf" value="2.0" step="0.1" min="0" max="100">
+                </div>
+            </div>
+        </details>
+
+        <h3>📝 Lista de Gastos</h3>
+        <div class="data-editor-controls">
+            <button id="addExpenseRowBtn" class="btn">Añadir Gasto</button>
+        </div>
+        <table id="expensesTable">
+            <thead>
+                <tr>
+                    <th>Concepto</th>
+                    <th>Importe (€)</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de gastos se añadirán aquí por JavaScript -->
+            </tbody>
+        </table>
+
+        <h3>🧾 Resumen Financiero</h3>
+        <div class="columns">
+            <div class="column">
+                <h4>Detalle Salarial</h4>
+                <p>Salario base (160h): <strong id="summarySalarioBase">€0.00</strong></p>
+                <p id="summaryHorasExtraRow" style="display:none;">Horas extra (<span id="summaryHorasExtraCount">0</span>h): <strong id="summaryImporteHorasExtra">€0.00</strong></p>
+                <p>Salario bruto total: <strong id="summarySalarioBruto">€0.00</strong></p>
+                <p>Retención IRPF (<span id="summaryIrpfPercentage">0.0</span>%): <strong id="summaryIrpfAmount">€0.00</strong></p>
+                <h4>Salario Neto Disponible: <span class="highlight-value" id="summarySalarioNeto">€0.00</span></h4>
+            </div>
+            <div class="column">
+                <h4>Balance de Gastos</h4>
+                <p><strong>Total Gastos:</strong> <span id="summaryTotalGastos">€0.00</span></p>
+                <div id="summarySaldoContainer">
+                     <p class="success-message"><strong>Saldo Restante:</strong> <span id="summarySaldoRestante">€0.00</span></p>
+                </div>
+                <p><strong>Porcentaje gastado del neto:</strong> <span id="summaryPorcentajeGastado">0.0</span>%</p>
+            </div>
+        </div>
+
+        <h3>🍰 Distribución de Gastos</h3>
+        <div class="chart-container">
+            <canvas id="expensesPieChart"></canvas>
+        </div>
+         <hr class="footer-hr">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
