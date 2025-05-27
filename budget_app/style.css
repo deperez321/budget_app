@@ -1,298 +1,229 @@
-/* --- OPCIÓN 1: Holograma Cyan Etéreo --- */
+/* --- OPCIÓN 3.1: Bosque Profundo y Sereno --- */
 body {
-    background-color: #00001A; /* Azul noche aún más oscuro */
-    color: #D0E0FF; /* Blanco azulado muy pálido */
-    font-family: 'Nova Square', 'Aldrich', sans-serif;
+    background-color: #E8F0E8; /* Verde muy pálido, casi gris */
+    color: #2F3E2F; /* Verde bosque muy oscuro para texto */
+    font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    line-height: 1.6;
+    line-height: 1.7;
     font-size: 16px;
-    overflow-x: hidden; /* Prevenir scroll por sombras grandes */
-}
-
-@keyframes subtle-glow {
-  0%, 100% { opacity: 0.7; }
-  50% { opacity: 1; }
-}
-
-@keyframes holographic-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
     max-width: 900px;
-    margin: 40px auto;
-    background-color: rgba(10, 20, 70, 0.6); /* Azul oscuro translúcido */
+    margin: 30px auto;
+    background-color: #FCFCFA; /* Blanco hueso muy sutil */
     padding: 30px 40px;
-    border-radius: 8px; /* Bordes más suaves */
-    border: 2px solid transparent;
-    border-image: linear-gradient(135deg, rgba(0,220,255,0.5), rgba(100,150,255,0.7), rgba(0,220,255,0.5)) 1;
-    border-image-slice: 1;
-    box-shadow: 0 0 40px rgba(0, 200, 255, 0.3), 0 0 15px rgba(150, 200, 255, 0.2), inset 0 0 20px rgba(0, 50, 100, 0.5);
-    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(40, 60, 40, 0.12);
+    border: 1px solid #D8E0D8; /* Borde verde grisáceo claro */
 }
-/* Efecto de scanlines sutiles */
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 100, 150, 0.03),
-        rgba(0, 100, 150, 0.03) 1px,
-        transparent 1px,
-        transparent 3px
-    );
-    pointer-events: none;
-    z-index: 0;
-    border-radius: inherit;
-}
-
 
 h1 {
-    color: #FFFFFF;
+    color: #3A5F3A; /* Verde bosque medio */
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
     font-weight: 700;
-    font-size: 2.5em;
-    letter-spacing: 1.5px;
-    text-shadow:
-        0 0 5px #FFFFFF,
-        0 0 10px #FFFFFF,
-        0 0 15px #00DFFF, /* Cyan brillante */
-        0 0 25px #00DFFF,
-        0 0 35px #00AFFF, /* Azul más suave */
-        0 0 50px #007FFF;
-    animation: subtle-glow 3s infinite ease-in-out;
+    font-size: 2em;
 }
 
 h3 {
-    color: #B0D0FF; /* Azul pálido */
-    border-bottom: 2px solid transparent;
-    border-image: linear-gradient(to right, rgba(0,200,255,0.3), rgba(100,180,255,0.6), rgba(0,200,255,0.3)) 1;
-    border-image-slice: 1;
-    padding-bottom: 12px;
-    margin-top: 40px;
-    margin-bottom: 25px;
+    color: #506A50; /* Verde bosque más claro */
+    border-bottom: 2px solid #E0E8E0; /* Verde muy pálido */
+    padding-bottom: 10px;
+    margin-top: 35px;
+    margin-bottom: 20px;
     font-weight: 600;
-    font-size: 1.7em;
-    text-shadow: 0 0 8px rgba(176, 208, 255, 0.7), 0 0 15px rgba(0,200,255,0.5);
+    font-size: 1.4em;
 }
 h4 {
-    color: #C0E0FF;
+    color: #607A60; /* Verde grisáceo */
     margin-top: 20px;
-    margin-bottom: 12px;
-    font-weight: 500;
-    text-shadow: 0 0 5px rgba(192, 224, 255, 0.6);
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
-.input-group { margin-bottom: 22px; }
+.input-group { margin-bottom: 20px; }
 .input-group label {
     display: block;
-    color: #C0E0FF;
+    color: #506A50;
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-size: 0.95em;
 }
 .input-group input[type="number"],
 .input-group input[type="text"] {
-    background-color: rgba(0, 20, 50, 0.7); /* Azul oscuro translúcido */
-    color: #E8F0FF;
-    border: 1px solid rgba(0, 127, 255, 0.4);
-    border-radius: 4px;
-    padding: 12px 15px;
+    background-color: #F7F9F7; /* Verde extremadamente pálido */
+    color: #2F3E2F;
+    border: 1px solid #D8E0D8;
+    border-radius: 6px;
+    padding: 10px 14px;
     width: 100%;
     box-sizing: border-box;
     font-size: 1em;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 0 8px rgba(0,100,150,0.3);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .input-group input[type="number"]:focus,
 .input-group input[type="text"]:focus {
-    border-color: #00DFFF;
-    box-shadow: 0 0 15px rgba(0, 223, 255, 0.5), inset 0 0 10px rgba(0,150,200,0.4);
+    border-color: #6B8E6B; /* Verde bosque más claro para foco */
+    box-shadow: 0 0 0 3px rgba(107, 142, 107, 0.2);
     outline: none;
-    background-color: rgba(0, 30, 70, 0.8);
 }
 .input-group small {
     display: block;
-    font-size: 0.8em;
-    color: #80A0D0; /* Azul grisáceo */
-    margin-top: 6px;
+    font-size: 0.85em;
+    color: #708A70; /* Verde grisáceo más claro */
+    margin-top: 5px;
 }
 
 .metric {
-    background-color: rgba(0, 30, 80, 0.65);
-    border-left: 4px solid #00DFFF;
-    padding: 18px 20px;
+    background-color: #F0F5F0; /* Verde muy pálido */
+    border-left: 4px solid #6B8E6B; /* Verde bosque claro */
+    padding: 15px 18px;
+    border-radius: 6px;
     margin-top: 28px;
-    border-radius: 4px;
-    box-shadow: 0 0 15px rgba(0, 223, 255, 0.2), inset 0 0 10px rgba(0,50,100,0.3);
 }
-.metric label { color: #C0E0FF; margin-bottom: 6px; font-weight: 500; }
-.metric div { color: #FFFFFF; font-size: 1.6em; font-weight: 600; text-shadow: 0 0 5px #FFFFFF, 0 0 10px #00DFFF; }
-.metric p { color: #80A0D0; font-size: 0.9em; margin: 6px 0 0 0; }
+.metric label { color: #506A50; margin-bottom: 5px; font-weight: 500; font-size: 0.9em; }
+.metric div { color: #3A5F3A; font-size: 1.5em; font-weight: 600; }
+.metric p { color: #708A70; font-size: 0.85em; margin: 5px 0 0 0; }
 
 .expander {
-    background-color: rgba(10, 25, 75, 0.7);
-    border: 1px solid rgba(0,127,255,0.4);
-    border-radius: 6px;
+    background-color: #FCFCFA;
+    border: 1px solid #D8E0D8;
+    border-radius: 8px;
     margin-bottom: 25px;
     overflow: hidden;
 }
 .expander summary {
-    font-size: 1.2em;
+    font-size: 1.15em;
     font-weight: 600;
-    color: #B0D0FF;
-    padding: 18px 22px;
+    color: #506A50;
+    padding: 15px 20px;
     cursor: pointer;
     outline: none;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    text-shadow: 0 0 6px rgba(176, 208, 255, 0.6);
-    border-bottom: 1px solid transparent;
+    transition: background-color 0.15s ease;
+    background-color: #F7F9F7;
+    border-bottom: 1px solid #D8E0D8;
 }
 .expander[open] summary {
-    background-color: rgba(0, 20, 60, 0.8);
-    color: #E0F0FF;
-    border-bottom: 1px solid rgba(0,127,255,0.3);
+    background-color: #E8F0E8;
 }
 .expander summary:hover {
-    background-color: rgba(0, 30, 80, 0.8);
-    color: #FFFFFF;
+    background-color: #F0F5F0;
 }
 .expander-content {
-    padding: 20px 22px;
-    background-color: rgba(10,25,75,0.6);
+    padding: 20px;
+    background-color: #FCFCFA;
 }
 
 .columns { display: flex; gap: 25px; margin-bottom: 25px; }
 .column { flex: 1; }
 
-.data-editor-controls { margin-bottom: 15px; text-align: right; }
+.data-editor-controls { margin-bottom: 12px; text-align: right; }
 #expensesTable {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 25px;
-    border: 1px solid rgba(0,127,255,0.3);
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    background-color: rgba(0,10,40,0.6);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #D8E0D8;
 }
 #expensesTable th, #expensesTable td {
-    padding: 14px 18px;
+    padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid rgba(0, 80, 150, 0.4);
+    border-bottom: 1px solid #E0E8E0;
 }
 #expensesTable th {
-    background-color: rgba(0, 20, 60, 0.7);
-    color: #B0D0FF;
+    background-color: #F0F5F0;
+    color: #506A50;
     font-weight: 600;
     font-size: 0.9em;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
-#expensesTable td input[type="text"],
-#expensesTable td input[type="number"] {
+#expensesTable td input[type="text"].table-input,
+#expensesTable td input[type="number"].table-input {
     width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 15, 45, 0.7);
-    border: 1px solid rgba(0,100,180,0.5);
-    color: #E0E8FF;
+    padding: 8px 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #D8E0D8;
+    color: #2F3E2F;
+    border-radius: 4px;
     box-sizing: border-box;
-    border-radius: 3px;
+    font-size: 0.95em;
 }
-#expensesTable td input[type="text"]:focus,
-#expensesTable td input[type="number"]:focus {
-     border-color: #00DFFF;
-     background-color: rgba(0, 25, 65, 0.8);
+#expensesTable td input[type="text"].table-input:focus,
+#expensesTable td input[type="number"].table-input:focus {
+     border-color: #6B8E6B;
 }
 #expensesTable tr:last-child td { border-bottom: none; }
-#expensesTable tr:hover td { background-color: rgba(0, 30, 80, 0.7); }
+#expensesTable tr:hover td { background-color: #F7F9F7; }
 
 
-.btn, .delete-btn {
-    background: linear-gradient(135deg, rgba(0,180,255,0.2), rgba(0,100,200,0.3));
-    color: #E0F0FF;
-    border: 1px solid #00AFFF;
-    border-radius: 4px;
-    padding: 10px 20px;
+.btn, .btn-danger {
+    background-color: #5A8B5A; /* Verde bosque medio-oscuro */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 18px;
     cursor: pointer;
     font-size: 0.95em;
-    transition: all 0.25s ease;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-shadow: 0 0 8px rgba(0,175,255,0.7);
-    box-shadow: 0 0 10px rgba(0,175,255,0.2), inset 0 0 5px rgba(100,200,255,0.1);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-weight: 500;
 }
-.btn:hover, .delete-btn:hover {
-    background: linear-gradient(135deg, rgba(0,200,255,0.3), rgba(0,120,220,0.4));
-    color: #FFFFFF;
-    border-color: #00DFFF;
-    box-shadow: 0 0 20px rgba(0,223,255,0.4), inset 0 0 8px rgba(150,220,255,0.2);
+.btn:hover, .btn-danger:hover {
+    background-color: #4A7B4A; /* Verde más oscuro */
     transform: translateY(-1px);
 }
-.delete-btn {
-    background: linear-gradient(135deg, rgba(255,100,150,0.2), rgba(200,50,100,0.3));
-    color: #FFD0E0; /* Rosa pálido */
-    border-color: #FF69B4; /* HotPink */
-    text-shadow: 0 0 8px rgba(255,105,180,0.7);
-    box-shadow: 0 0 10px rgba(255,105,180,0.2), inset 0 0 5px rgba(255,150,200,0.1);
-    padding: 8px 15px;
+.btn:active, .btn-danger:active {
+    transform: translateY(0px);
 }
-.delete-btn:hover {
-    background: linear-gradient(135deg, rgba(255,120,170,0.3), rgba(220,70,120,0.4));
-    color: #FFFFFF;
-    border-color: #FF80C0;
-    box-shadow: 0 0 20px rgba(255,128,192,0.4), inset 0 0 8px rgba(255,180,220,0.2);
+.btn-danger {
+    background-color: #A0522D; /* Siena (marrón rojizo) */
+    padding: 7px 14px;
+    font-size: 0.9em;
+}
+.btn-danger:hover {
+    background-color: #8B4513; /* Marrón silla de montar */
 }
 
-.highlight-value {
-    color: #FFFFFF;
-    font-weight: 700;
-    font-size: 1.15em;
-    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #00DFFF;
-}
+.highlight-value { color: #3A5F3A; font-weight: 600; font-size: 1.1em; }
 .success-message, .error-message {
     font-weight: 500;
-    padding: 12px 18px;
-    margin: 15px 0;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 12px 0;
     font-size: 0.95em;
-    border-radius: 4px;
-    background-color: rgba(0,50,100,0.5);
-    border-width: 1px;
-    border-style: solid;
 }
 .success-message {
-    color: #A0E0FF; /* Azul cielo muy pálido */
-    border-color: #00AFFF;
-    box-shadow: 0 0 10px rgba(0,175,255,0.2) inset;
+    color: #2E7D32; /* Verde oscuro */
+    background-color: #E8F5E9; /* Verde muy pálido */
+    border: 1px solid #C8E6C9;
 }
 .error-message {
-    color: #FFB0C0; /* Rosa coral pálido */
-    border-color: #FF7F50; /* Coral */
-    box-shadow: 0 0 10px rgba(255,127,80,0.2) inset;
+    color: #8B4513; /* Marrón silla de montar */
+    background-color: #FAEBD7; /* Lino antiguo */
+    border: 1px solid #F5DEB3; /* Trigo */
 }
 
 .chart-container {
     width: 100%;
     max-width: 500px;
     margin: 30px auto;
-    background-color: rgba(10, 20, 70, 0.65);
-    padding: 25px;
-    border: 1px solid rgba(0,127,255,0.5);
-    border-radius: 6px;
-    box-shadow: 0 0 20px rgba(0,127,255,0.2);
+    background-color: #FCFCFA;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #D8E0D8;
 }
 
 .footer-hr {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, transparent, rgba(0,200,255,0.5), transparent);
-    margin-top: 50px;
-    opacity: 0.6;
+    background-color: #D8E0D8;
+    margin-top: 40px;
 }
 
 @media (max-width: 768px) {
@@ -300,7 +231,7 @@ h4 {
     .container { padding: 20px; margin: 15px auto; }
     .columns { flex-direction: column; gap: 15px; }
     .metric { margin-top: 10px; }
-    h1 { font-size: 2.1em; margin-bottom: 30px; }
-    h3 { font-size: 1.5em; margin-top: 30px; margin-bottom: 20px; }
+    h1 { font-size: 1.8em; margin-bottom: 30px; }
+    h3 { font-size: 1.3em; margin-top: 30px; margin-bottom: 20px; }
     .chart-container { padding: 15px; }
 }
